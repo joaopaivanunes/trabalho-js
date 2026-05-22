@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Javascript</title>
+</head>
+<body>
+
+    <h1>Desafio: Procurando na Lista</h1>
+    <p>Abra o console do navegador (F12) para ver o resultado!</p>
+
+    <script>
+        // O SEU CÓDIGO JAVASCRIPT ENTRA AQUI
+        const alunos = ['João', 'Juliana', 'Ana', 'Caio'];
+        const medias = [10, 8, 7.5, 9];
+
+        function buscaNotaAluno(nomeDoAluno) {
+            let indice = alunos.indexOf(nomeDoAluno);
+
+            if (indice !== -1) {
+                let mediaAluno = medias[indice];
+                return `O(A) aluno(a) ${nomeDoAluno} está na lista e sua média final é: ${mediaAluno}`;
+            } else {
+                return `O(A) aluno(a) ${nomeDoAluno} não foi encontrado(a) na lista.`;
+            }
+        }
+
+        // Testando e mostrando no Alerta da tela
+        alert(buscaNotaAluno('Juliana'));
+        
+        // Testando e mostrando no Console (F12)
+        console.log(buscaNotaAluno('Caio'));
+        console.log(buscaNotaAluno('Rodrigo'));
+    </script>
+</body>
+</html>
